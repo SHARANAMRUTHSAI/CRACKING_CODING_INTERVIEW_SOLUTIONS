@@ -8,7 +8,7 @@
 
 // we are using stringbuilder because the complexity string builder takes is very less when comapred to string.
 
-// since strings are immutable in java using only strings and appending them in your program affects your efficency drastically.
+// since strings are immutable in java using only strings and appending them in your program effects your efficency drastically.
 
 // timecomplexity--O(n)-->[n is the string length]
 
