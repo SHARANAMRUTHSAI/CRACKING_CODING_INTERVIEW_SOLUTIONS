@@ -13,6 +13,7 @@
 
 // space complexity--array size of 256
 
+// ANY SUGGESTION IS ALWAYS ACCEPTED.
 import java.util.*;
 
 class checkpermutation
