@@ -1,22 +1,13 @@
 // @ AUTHOR:SHARAN
-
 // WITH RESPECTIVE TO THE NAME OF THE QUESTION CLASS NAME IS DEFINED.
-
 // "i love you" --- "iloveyou" -----> [output:these are not permutations to each other because we considered white space also.]
-
 // time complexity-- O(n) -->[we are traversing the entire matrix once]
-
 // space complexity--array[lr]+array[lc]-->[length of a row in matrix+ length of a column in matrix]
-
-
-
 import java.util.*;
 class ZeroMatrix
 {
     public static void main(String[] args)
     {
-
-
         System.out.println("*********HI*********");
         System.out.println("PLEASE ENTER TO STRINGS TO CHECK IF THEY ARE ONE EDIT OR ZERO EDITS");
         Scanner sc=new Scanner(System.in);
@@ -33,15 +24,11 @@ class ZeroMatrix
              {
                 System.out.println("please enter the element corresponding to matrix index["+(i+1)+"]["+(j+1)+"] :");
                 temp.add(sc.nextInt());
-
              }
              matrix.add(temp);
         }
-
         changematrix(matrix);// this method will do the work for you
         System.out.println(matrix);
-
-
     }
 
     public static void changematrix(ArrayList<ArrayList<Integer>> matrix)
@@ -49,7 +36,6 @@ class ZeroMatrix
         // we use auxillary arrays inorder to set values when we encounter zero.
         int rowflag[]=new int[matrix.size()];
         int colflag[]=new int[matrix.get(0).size()];
-
         for(int i=0;i<matrix.size();i++)
         {
             for(int j=0;j<matrix.get(0).size();j++)
@@ -61,20 +47,13 @@ class ZeroMatrix
                 }
             }
         }
-
-
         for(int i=0;i<matrix.size();i++)
         {
             for(int j=0;j<matrix.get(0).size();j++)
             {
                 if(rowflag[i]==-1 || colflag[j]==-1)
-                {
                     matrix.get(i).set(j,0);
-                }
             }
         }
-
-
-
     }
 }
