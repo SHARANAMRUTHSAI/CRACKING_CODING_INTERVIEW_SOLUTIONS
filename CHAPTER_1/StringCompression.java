@@ -1,11 +1,7 @@
 // @ AUTHOR:SHARAN
-
 // WITH RESPECTIVE TO THE NAME OF THE QUESTION CLASS NAME IS DEFINED.
-
 // This program will take input string and case sensitive is considered.
-
 // time complexity--O(n)---> [n:length of the input string]
-
 // space complexity--we are creating a new string with worst case double the length of the input string
 import java.util.*;
 class StringCompression
@@ -20,14 +16,11 @@ class StringCompression
         compress(first); // this method will do the work for you
         System.out.println("************BYE****************");
     }
-
-
 // this function will do the compression of the string
     public static void compress(String first)
     {
          StringBuilder answer=new StringBuilder("");
          int count=1;
-
          // if the string is length of 1 then it should be handled separately.
          if(first.length()==1)
          {
@@ -40,15 +33,12 @@ class StringCompression
          for(int i=0;i<first.length()-1;i++)
          {
             if(first.charAt(i)==first.charAt(i+1))
-            {
                count++;
-            }
             else
             {
                 answer.append(first.charAt(i));
                 answer.append(count);
                 count=1;
-
             }
             // this condition helps when you have a string in which last character is different i.e "aabbccdde" and in normal case too "aabbcccdd"
             // it switches with respective to last character in the string.
@@ -57,10 +47,7 @@ class StringCompression
                     answer.append(first.charAt(i+1));
                     answer.append(count);
             }
-
          }
          System.out.println(answer.toString()); // converting to string is optional
     }
-
-
 }
